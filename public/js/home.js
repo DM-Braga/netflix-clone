@@ -19,12 +19,12 @@ const fetchMoviesListByGenres = (id, genres) => {
   }))
   .then(res => res.json())
   .then(data => {
-    makeCategotyElement(`${genres}_movies`, data.results)
+    makeCategoryElement(`${genres}_movies`, data.results)
   })
   .catch(err => console.log(err))
 }
 
-const makeCategotyElement = (category, data) => {
+const makeCategoryElement = (category, data) => {
   main.innerHTML += `
   <div class="movie-list">
 
